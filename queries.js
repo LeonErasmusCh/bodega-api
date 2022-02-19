@@ -88,3 +88,5 @@ const updateProduct = (request, response) => {
   // get product by id /product/1
   // post new product by id /products
   // put update product by id /products
+
+  // hosted url https://bodega-backend-api.herokuapp.com/products
