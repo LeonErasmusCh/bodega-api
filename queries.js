@@ -84,6 +84,8 @@ const updateProduct = (request, response) => {
     deleteProduct
   }
 
+  
+
   // get all products /products
   // get product by id /product/1
   // post new product by id /products
