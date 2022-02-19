@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const db = require('./queries')
+const dotenv = require('dotenv').config();
 
 const cors = require('cors')
 const port = process.env.PORT || 3000;
@@ -22,7 +23,6 @@ app.get('/product/:id', db.getProductById)
 app.post('/products', db.createProduct)
 app.put('/product/:id', db.updateProduct)
 app.delete('/products/:id', db.deleteProduct)
-
 
 
 

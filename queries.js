@@ -1,5 +1,5 @@
-const dotenv = require('dotenv');
-dotenv.config();
+const dotenv = require('dotenv').config();
+
 
 const { Client } = require('pg');
 
@@ -84,7 +84,7 @@ const updateProduct = (request, response) => {
     deleteProduct
   }
 
-  
+
 
   // get all products /products
   // get product by id /product/1
