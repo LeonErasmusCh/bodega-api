@@ -5,6 +5,7 @@ const dotenv = require('dotenv').config();
 const cors = require('cors')
 
 
+
 const app = express()
 
 app.use(cors({
@@ -36,3 +37,5 @@ app.listen(port, () => {
   
 
 // Run node index.js for local dev server
+
+// push again when crashed
