@@ -76,13 +76,16 @@ const updateProduct = (request, response) => {
   }
 
   // GET admin by id
-  const getAdminById = (req, res) => {
-    client.query('SELECT * FROM admin', (err, results) => {
-    if (err) throw err;
-      res.status(200).json(results.rows)
-      //client.end();
-    });
-    }
+  const getAdminById = (request, response) => {
+    const id = parseInt(request.params.id)
+  
+    client.query('SELECT * FROM admin WHERE id = $1', [id], (err, results) => {
+      if (err) {
+        throw error
+      }
+      response.status(200).json(results.rows)
+    })
+  }
 
 
   module.exports = {
