@@ -75,13 +75,26 @@ const updateProduct = (request, response) => {
     })
   }
 
+  // GET admin by id
+  const getAdminById = (request, response) => {
+    const id = parseInt(request.params.id)
+  
+    client.query('SELECT * FROM admin WHERE id = $1', [id], (err, results) => {
+      if (err) {
+        throw error
+      }
+      response.status(200).json(results.rows)
+    })
+  }
+
 
   module.exports = {
     getProducts,
     getProductById,
     createProduct,
     updateProduct,
-    deleteProduct
+    deleteProduct,
+    getAdminById
   }
 
 

@@ -27,6 +27,7 @@ app.get('/product/:id', db.getProductById)
 app.post('/products', db.createProduct)
 app.put('/product/:id', db.updateProduct)
 app.delete('/products/:id', db.deleteProduct)
+app.delete('/admin/:id', db.getAdminById)
 
 
 
@@ -37,5 +38,4 @@ app.listen(port, () => {
   
 
 // Run node index.js for local dev server
-
-// push again when crashed
+// NOTE: push again when Heroku crashes
