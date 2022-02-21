@@ -27,7 +27,7 @@ app.get('/product/:id', db.getProductById)
 app.post('/products', db.createProduct)
 app.put('/product/:id', db.updateProduct)
 app.delete('/products/:id', db.deleteProduct)
-app.get('/admin/:id', db.getAdminById)
+app.get('/admin/', db.getAdminById)
 
 
 
