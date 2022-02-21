@@ -79,7 +79,7 @@ const updateProduct = (request, response) => {
   const getAdminById = (request, response) => {
     const id = parseInt(request.params.id)
   
-    client.query('SELECT * FROM admin WHERE username = $1, password =$2', (err, results) => {
+    client.query('SELECT * FROM admin WHERE username = $1, password =$2',[username, password] (err, results) => {
       if (err) {
         throw error
       }
