@@ -30,8 +30,6 @@ app.delete('/products/:id', db.deleteProduct)
 app.get('/admin/', db.getAdminById)
 
 
-
-
 app.listen(port, () => {
   console.log(`App running on http://localhost:${port}`)
 })
